@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url('./assets/PTSans-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url('./assets/PTSans-Bold.ttf');
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
