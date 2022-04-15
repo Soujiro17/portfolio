@@ -1,10 +1,10 @@
 import './App.css'
+import React from 'react'
 import styled from 'styled-components'
 import Header from './components/Header'
 import { accent, white } from './constants/colors'
 import { motion } from 'framer-motion'
 import { Button } from './shared/Button'
-import Video from './assets/stars.mp4'
 // import ReactLogo from './assets/react.png'
 // import NodeLogo from './assets/node.png'
 // import MongoLogo from './assets/mongo.png'
@@ -12,6 +12,8 @@ import { keyframes } from 'styled-components'
 import { SourceVideo } from './shared/SourceVideo'
 import Projects from './components/Projects'
 import ContentLayout from './shared/ContentLayout'
+import Spinner from './components/Spinner'
+const BackgroundVideo = React.lazy(() => import('./components/BackgroundVideo'))
 
 
 const typingAnimation = keyframes`
@@ -74,16 +76,6 @@ const Subtitle = styled(motion.h3)`
   font-size: clamp(1.8rem, 4vw, 30rem);
 `
 
-const BackgroundVideo = styled.video`
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`
-
 const MainContent = styled.div`
   position: relative;
   height: 90vh;
@@ -112,10 +104,9 @@ function App() {
     <>
       <AppLayout>
         <Header />
-        <BackgroundVideo autoPlay = {true} muted loop playsInline>
-          <SourceVideo src={Video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </BackgroundVideo>
+        <React.Suspense fallback = {<Spinner/>}>
+          <BackgroundVideo />
+        </React.Suspense>
         <MainContent>
           {/* <FlyingImage src={`${srcDir}react.png`} alt = "" animate={{...imgAnimationLeft, y: [0, -900]}} transition = {imgDuration}  />
           <FlyingImage src={`${srcDir}node.png`} alt = "" animate={{...imgAnimationLeft, y: [-500, -600]}} transition = {imgDuration}  />
