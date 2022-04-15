@@ -1,16 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import { accent, white } from '../../constants/colors'
+import SectionContainer from '../../shared/SectionContainer'
+import { projectsItems } from '../../data/projects'
+import ProjectItem from '../ProjectItem'
 
-const ProjectsContainer = styled.div`
-  height: 100vh;
-  color: ${white};
-  background-color: ${accent};
+const TitleContainer = styled.div`
 `
+
+const Title = styled.h2`
+  font-size: clamp(3rem, 4vw, 15rem);
+  text-transform: uppercase;
+  margin: 0;
+`
+
+const MainContent = styled.div`
+`
+
 
 const Projects = () => {
   return (
-    <ProjectsContainer>Projects</ProjectsContainer>
+    <SectionContainer id='projects'>
+      <TitleContainer>
+        <Title>Projects</Title>
+      </TitleContainer>
+      <MainContent>
+        {
+          projectsItems.map((project) => <ProjectItem {...project} />)
+        }
+      </MainContent>
+    </SectionContainer>
   )
 }
 

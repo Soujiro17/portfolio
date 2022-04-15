@@ -1,22 +1,22 @@
 export const navbarItems = [
     {
         name: 'Home',
-        url: '/'
+        url: '/#home'
     },
     {
-        name: 'Home',
-        url: '/'
+        name: 'Projects',
+        url: '/#projects'
     },
     {
-        name: 'Home',
-        url: '/'
+        name: 'Skills',
+        url: '/#skills'
     },
     {
-        name: 'Home',
-        url: '/'
+        name: 'About me',
+        url: '/#about-me'
     },
     {
-        name: 'Home',
-        url: '/'
+        name: 'Contact',
+        url: '/#contact'
     },
 ]

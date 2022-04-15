@@ -117,8 +117,8 @@ function App() {
           <TitlesContainer>
             <Title>Full Stack Developer</Title>
             <Subtitle>Vicente Reyes Cáceres</Subtitle>
-            <Button whileHover = {{ scale: 1.1}} whileTap = {{scale: 0.9}} inline margin>Download CV</Button>
-            <Button whileHover = {{ scale: 1.1}} whileTap = {{scale: 0.9}} inline margin>Projects</Button>
+            <Button whileHover = {{ scale: 1.05}} whileTap = {{scale: 0.9}} inline margin>Download CV</Button>
+            <Button whileHover = {{ scale: 1.05}} whileTap = {{scale: 0.9}} inline margin>Projects</Button>
           </TitlesContainer>
         </MainContent>          
       </AppLayout>
