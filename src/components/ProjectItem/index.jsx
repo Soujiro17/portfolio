@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from '../../shared/Button'
 import { white, whiteHover } from '../../constants/colors'
 
 const ProjectItemContainer = styled.div`
@@ -37,7 +38,19 @@ const ProjectMiniature = styled.img`
 `
 
 const ProjectButtons = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 10%;
+`
+
+const Anchor = styled.a`
+    display: block;
+    line-height: 2.5rem;
+    height: 100%;
+    width: 100%;
+    color: ${white};
+    text-decoration: none;
 `
 
 const img = 'https://www.reachfirst.com/wp-content/uploads/2018/08/Web-Development.jpg'
@@ -52,7 +65,12 @@ const ProjectItem = ({ name, github, demo, miniature }) => {
             <ProjectMiniature src={img} alt = ""/>
         </ProjectContent>
         <ProjectButtons>
-            Buttons
+            <Button width = "30%" margin = ".5rem" backgroundColor = "purple">
+                <Anchor href={github} target = '_blank'>{"</> "}Code</Anchor>
+            </Button>
+            <Button width = "30%" margin = ".5rem" backgroundColor = "purple">
+                <Anchor href={demo} target = '_blank'>Demo</Anchor>
+            </Button>
         </ProjectButtons>
     </ProjectItemContainer>
   )

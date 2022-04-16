@@ -15,3 +15,6 @@ export const accentLightHover = '#fff'
 
 export const buttonAndInputHeight = '2.5rem'
 export const buttonAndInputRadius = '2rem'
+
+
+export const purple = 'purple'
