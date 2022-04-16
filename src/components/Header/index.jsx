@@ -62,7 +62,7 @@ const NavRedirect = styled.a`
 const Header = () => {
 
   return (
-    <HeaderContainer>
+    <HeaderContainer id= 'header'>
         <NavbarContainer>
             <NavList>
                 {

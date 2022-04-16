@@ -1,7 +1,7 @@
 export const navbarItems = [
     {
         name: 'Home',
-        url: '/#home'
+        url: '/'
     },
     {
         name: 'Projects',

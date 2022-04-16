@@ -1,4 +1,3 @@
-import './App.css'
 import React from 'react'
 import styled from 'styled-components'
 import Header from './components/Header'
@@ -13,6 +12,10 @@ import { SourceVideo } from './shared/SourceVideo'
 import Projects from './components/Projects'
 import ContentLayout from './shared/ContentLayout'
 import Spinner from './components/Spinner'
+import Skills from './components/Skills'
+import AboutMe from './components/AboutMe'
+import Contact from './components/Contact'
+import GoUp from './components/GoUp'
 const BackgroundVideo = React.lazy(() => import('./components/BackgroundVideo'))
 
 
@@ -124,7 +127,11 @@ function App() {
       </AppLayout>
       <ContentLayout>
         <Projects />
+        <Skills />
+        <AboutMe />
+        <Contact />
       </ContentLayout>
+      <GoUp />
     </>
   )
 }

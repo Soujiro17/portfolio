@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../../shared/Button'
 import { white, whiteHover } from '../../constants/colors'
+import { motion } from 'framer-motion'
 
 const ProjectItemContainer = styled.div`
     min-width: 320px;
@@ -26,7 +27,7 @@ const ProjectContent = styled.div`
     position: relative;
 `
     
-const ProjectMiniature = styled.img`
+const ProjectMiniature = styled(motion.img)`
     position: absolute;
     inset: 0;
     margin: auto;
@@ -62,7 +63,7 @@ const ProjectItem = ({ name, github, demo, miniature }) => {
             <ProjectTitle>{name}</ProjectTitle>
         </TitleContainer>
         <ProjectContent>
-            <ProjectMiniature src={img} alt = ""/>
+            <ProjectMiniature src={miniature || img} whileHover = {{scale: 1.05}} alt = ""/>
         </ProjectContent>
         <ProjectButtons>
             <Button width = "30%" margin = ".5rem" backgroundColor = "purple">
