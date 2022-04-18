@@ -17,5 +17,5 @@ export const en = {
     NavbarProjects: 'Projects',
     NavbarSkills: 'Skills',
     NavbarAboutMe: 'About Me',
-    NavbarContact: 'Home'
+    NavbarContact: 'Contact'
 }
