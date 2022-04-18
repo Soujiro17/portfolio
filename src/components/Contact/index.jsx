@@ -1,9 +1,13 @@
 import React from 'react'
+import useLanguage from '../../hooks/useLanguage'
 import SectionContainer from '../../shared/SectionContainer'
 
 const Contact = () => {
+
+  const { dictionary } = useLanguage()
+
   return (
-    <SectionContainer title= "Contact" id = "contact">Contact</SectionContainer>
+    <SectionContainer title= {dictionary.ContactTitle} subtitle = {dictionary.ContactSubtitle} id = "contact">Contact</SectionContainer>
   )
 }
 

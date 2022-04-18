@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { accent, white, whiteHover } from '../../constants/colors'
 import List from '../Icons/List'
-import { navbarItems } from '../../data/navbar'
+import useNavbarItems from '../../hooks/useNavbarItems'
 
 const mediaQuery = 500
 
@@ -93,7 +93,7 @@ const NavRedirect = styled.a`
     }
 
     &:hover{
-        color: ${whiteHover}
+        color: ${whiteHover};
     }
     
     @media (max-width: ${mediaQuery}px){
@@ -105,7 +105,9 @@ const NavRedirect = styled.a`
 `
 
 const NavItemIcon = styled.div`
-    display: inline-block;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 `
 
 const NavItemText = styled.div`
@@ -121,6 +123,8 @@ const NavItemText = styled.div`
 const Header = () => {
     const [showNavbar, setShowNavbar] = useState(false)
 
+    const navbarItems = useNavbarItems()
+
     const handleShowNavbar = () => setShowNavbar(!showNavbar)
 
   return (
@@ -130,7 +134,7 @@ const Header = () => {
             <NavList showNav = {showNavbar}>
                 {
                     navbarItems.map((item, i) => 
-                        <NavItem key={i} showNav = {showNavbar}>
+                        <NavItem key={i} showNav = {showNavbar} onClick={item.function}>
                             <NavRedirect href={item.url}>
                                 <NavItemIcon>
                                     {item.icon}

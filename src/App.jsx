@@ -4,9 +4,6 @@ import Header from './components/Header'
 import { accent, white } from './constants/colors'
 import { motion } from 'framer-motion'
 import { Button } from './shared/Button'
-// import ReactLogo from './assets/react.png'
-// import NodeLogo from './assets/node.png'
-// import MongoLogo from './assets/mongo.png'
 import { keyframes } from 'styled-components'
 import { SourceVideo } from './shared/SourceVideo'
 import Projects from './components/Projects'
@@ -85,23 +82,7 @@ const MainContent = styled.div`
   overflow: hidden;
 `
 
-// const FlyingImage = styled(motion.img)`
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   height: 5rem;
-//   width: 5rem;
-//   object-fit: contain;
-// `
-
 function App() {
-
-  // const imgAnimationLeft = { x: [-80, 2000], rotate: [0, 360]}
-  // const imgAnimationRight = { x: [2000, -80], rotate: [0, 360]}
-
-  // const imgDuration = {duration: 25, repeat: Infinity}
-
-  // const srcDir = 'src/assets/'
 
   return (
     <>
@@ -111,12 +92,6 @@ function App() {
           <BackgroundVideo />
         </React.Suspense>
         <MainContent>
-          {/* <FlyingImage src={`${srcDir}react.png`} alt = "" animate={{...imgAnimationLeft, y: [0, -900]}} transition = {imgDuration}  />
-          <FlyingImage src={`${srcDir}node.png`} alt = "" animate={{...imgAnimationLeft, y: [-500, -600]}} transition = {imgDuration}  />
-          <FlyingImage src={`${srcDir}mongo.png`} alt = "" animate={{...imgAnimationLeft, y: [-900, 0]}} transition = {imgDuration}  />
-          <FlyingImage src={`${srcDir}mysql.png`} alt = "" animate={{...imgAnimationRight, y: [-900, 0]}} transition = {imgDuration}  />
-          <FlyingImage src={`${srcDir}html.png`} alt = "" animate={{...imgAnimationRight, y: [-600, -500]}} transition = {imgDuration}  />
-          <FlyingImage src={`${srcDir}css.png`} alt = "" animate={{...imgAnimationRight, y: [0, -900]}} transition = {imgDuration}  /> */}
           <TitlesContainer>
             <Title>Full Stack Developer</Title>
             <Subtitle>Vicente Reyes Cáceres</Subtitle>

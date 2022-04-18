@@ -1,9 +1,13 @@
 import React from 'react'
+import useLanguage from '../../hooks/useLanguage'
 import SectionContainer from '../../shared/SectionContainer'
 
 const AboutMe = () => {
+
+  const { dictionary } = useLanguage()
+
   return (
-    <SectionContainer title={"About Me"} id = "about-me">AboutMe</SectionContainer>
+    <SectionContainer title={dictionary.AboutMeTitle} subtitle = {dictionary.AboutMeSubtitle} id = "about-me">AboutMe</SectionContainer>
   )
 }
 
