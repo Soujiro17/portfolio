@@ -105,7 +105,7 @@ const NavRedirect = styled.a`
 `
 
 const NavItemIcon = styled.div`
-    display: flex;
+    display: inline-flex;
     align-items: flex-end;
     justify-content: center;
 `
